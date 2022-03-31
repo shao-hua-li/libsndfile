@@ -150,7 +150,7 @@ Need separate gsm_data structs for encode and decode.
 			pgsm610->blocks = psf->datalength / pgsm610->blocksize + 1 ;
 			} ;
 
-		psf->sf.frames = pgsm610->samplesperblock * pgsm610->blocks ;
+		psf->sf.frames = (long)pgsm610->samplesperblock * pgsm610->blocks ;
 
 		psf_fseek (psf, psf->dataoffset, SEEK_SET) ;
 
